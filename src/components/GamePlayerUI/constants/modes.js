@@ -1,0 +1,2 @@
+export const DISCRETE = "GPUI_MODE_DISCRETE";
+export const CONTINUOUS = "GPUI_MODE_CONTINUOUS";

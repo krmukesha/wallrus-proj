@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  web:
+    image: registry.the-wallrus.com/orangerine/la-vie-secrete-des-monstres/client-app:${DOCKER_TAG}
+    container_name: ${SHORT_NAME}_web
+    restart: unless-stopped
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.${SHORT_NAME}-http.rule=Host(`${DOMAIN}`)
+      - traefik.http.routers.${SHORT_NAME}-http.entrypoints=web
+      - traefik.http.routers.${SHORT_NAME}-http.entrypoints=websecure
+      - traefik.http.routers.${SHORT_NAME}-http.tls=true
+networks:
+  default:
+    external: true
+    name: proxy

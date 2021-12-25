@@ -1,0 +1,48 @@
+stages:
+  - build
+  - deploy
+
+variables:
+  SERVER_SSH: "$SERVER_USER@$SERVER_IP"
+
+docker-build:
+  stage: build
+  image:
+    name: gcr.io/kaniko-project/executor:debug
+    entrypoint: [""]
+  only:
+    - master
+    - develop
+  variables:
+    IMAGE_TAG: $REGISTRY_URL/$CI_PROJECT_PATH:$CI_COMMIT_REF_SLUG
+  script:
+    - echo "{\"auths\":{\"$REGISTRY_URL\":{\"username\":\"$REGISTRY_USER\",\"password\":\"$REGISTRY_PASSWORD\"}}}" > /kaniko/.docker/config.json
+    - /kaniko/executor --context $CI_PROJECT_DIR --dockerfile $CI_PROJECT_DIR/Dockerfile --destination $IMAGE_TAG
+
+deploy_develop:
+  stage: deploy
+  image: alpine
+  only:
+    - develop
+  before_script:
+    - apk update && apk add openssh-client rsync
+    - mkdir -p ~/.ssh && chmod 700 ~/.ssh && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+    - eval $(ssh-agent -s)
+    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+  script:
+    - echo -e "$STAGING_ENV_FILE" | ssh "$SERVER_SSH" -T "cat > $STAGING_FOLDER/.env"
+    - ssh "$SERVER_SSH" -T "cd $STAGING_FOLDER && docker-compose pull && docker-compose up -d --build --remove-orphans"
+
+deploy_production:
+  stage: deploy
+  image: alpine
+  only:
+    - master
+  before_script:
+    - apk update && apk add openssh-client rsync
+    - mkdir -p ~/.ssh && chmod 700 ~/.ssh && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+    - eval $(ssh-agent -s)
+    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+  script:
+    - echo -e "$PRODUCTION_ENV_FILE" | ssh "$SERVER_SSH" -T "cat > $PRODUCTION_FOLDER/.env"
+    - ssh "$SERVER_SSH" -T "cd $PRODUCTION_FOLDER && docker-compose pull && docker-compose up -d --build --remove-orphans"

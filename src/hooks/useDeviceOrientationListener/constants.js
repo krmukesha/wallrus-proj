@@ -1,0 +1,4 @@
+export const DO_STATE_STANDBY = "DO_STATE_STANDBY";
+export const DO_STATE_RUNNING = "DO_STATE_RUNNING";
+export const DO_STATE_STOPPED = "DO_STATE_STOPPED";
+export const DO_STATE_ERROR = "DO_STATE_ERROR";

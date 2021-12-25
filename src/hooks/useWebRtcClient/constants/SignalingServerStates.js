@@ -1,0 +1,5 @@
+export const SS_IDLE = "SS_IDLE";
+export const SS_CONNECTING = "SS_CONNECTING";
+export const SS_CONNECTED = "SS_CONNECTED";
+export const SS_RECONNECTING = "SS_RECONNECTING";
+export const SS_DISCONNECTED = "SS_DISCONNECTED";

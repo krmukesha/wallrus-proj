@@ -1,0 +1,11 @@
+export const SET_H_LOCK = "SET_H_LOCK";
+export const SET_V_LOCK = "SET_V_LOCK";
+export const SET_O_LOCK = "SET_O_LOCK";
+export const SET_GAIN = "SET_GAIN";
+export const SET_H_GAIN = "SET_H_GAIN";
+export const SET_V_GAIN = "SET_V_GAIN";
+export const SET_OFFSET = "SET_OFFSET";
+export const SET_TOP_OFFSET = "SET_TOP_OFFSET";
+export const SET_LEFT_OFFSET = "SET_LEFT_OFFSET";
+export const SET_SCREEN_DIMENSIONS = "SET_SCREEN_BOUNDARIES";
+export const SET_DISTANCE_BOUND = "SET_DISTANCE_BOUND";

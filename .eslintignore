@@ -1,0 +1,9 @@
+build
+node_modules
+.github
+src/images
+src/services/adapter-latest.js
+conf
+nginx
+public
+bak.*

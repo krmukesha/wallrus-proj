@@ -1,0 +1,237 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: CircularAir-Light;
+}
+@font-face {
+  font-family: Imperator;
+  src: url("/src/assets/fonts/ImperatorBold.ttf");
+}
+
+@font-face {
+  font-family: CircularAir-Light;
+  src: url("/src/assets/fonts/CircularAir-Light.ttf");
+}
+
+.font-circular {
+  font-family: CircularAir-Light;
+}
+.font-imperator {
+  font-family: Imperator;
+}
+.background-image {
+  width: 480px;
+  background: url(../src/images/Bitmap.png);
+  min-height: 100vh;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  margin: auto;
+}
+.paper .MuiPaper-elevation1 {
+  box-shadow: none;
+}
+.paper .MuiPaper-root {
+  color: rgba(0, 0, 0, 0.87);
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  background-color: #fff;
+}
+/* .paper {
+  background: url(../src/images/Bitmap.png);
+  height: 100vh;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+} */
+.paper p {
+  color: #fff;
+  font-family: CircularAir-Light;
+}
+.custom-info-box button {
+  background-color: #000 !important;
+  display: block;
+  border-radius: 30px;
+  padding: 10px auto;
+  width: 70%;
+  margin: auto;
+}
+.Walkthrough-paper-10 {
+  color: rgba(0, 0, 0, 0.54);
+  text-align: left;
+  max-width: 500px;
+  padding: 48px;
+  margin: auto;
+  background: red;
+}
+.paper h2 {
+  color: #fff;
+  font-family: Imperator;
+}
+.paper .InfoBoxFullWidth-alignCenter-68 {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.paper .InfoBoxFullWidth-actionButtom-61 {
+  width: 100%;
+  margin: 8px;
+  text-transform: uppercase;
+}
+.paper .InfoBoxFullWidth-actionButtom-61 {
+  width: 100%;
+  margin: 0px;
+  text-transform: uppercase;
+  border-radius: 30px;
+  background-color: #191919;
+  height: 60px;
+  width: 100%;
+  color: #fff;
+  margin-top: 0.8rem;
+  font-size: 1.1rem;
+  border: none;
+  padding: 10px;
+}
+button.MuiButtonBase-root.MuiButton-root.MuiButton-contained.InfoBoxFullWidth-actionButtom-61.MuiButton-containedPrimary {
+  border-radius: 30px;
+  background-color: #191919;
+  height: 60px;
+  width: 100%;
+  color: #fff;
+  margin-top: 0.8rem;
+  font-size: 1.1rem;
+  border: none;
+  padding: 10px;
+}
+.background-image {
+  width: 480px;
+}
+.MuiButton-root:hover {
+  text-decoration: none;
+  background-color: none !important;
+}
+
+.width-custom {
+  width: 70%;
+  margin-left: 50px;
+  margin-top: -30px;
+}
+.background-image .MuiPaper-root {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+.top-images {
+  background: url(../src/assets/images/Bitmap-1.png);
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+  width: 80%;
+  position: absolute;
+  top: -70px;
+  pointer-events: none;
+}
+
+.home-text {
+  font-size: 1.9rem;
+  line-height: 38px;
+  padding-bottom: 1rem;
+  text-transform: uppercase;
+  padding: 1rem 30px 0;
+
+}
+.line {
+  box-sizing: border-box;
+  height: 1px;
+  width: 100px;
+  margin: auto;
+  border: 1px solid #fff;
+}
+.font-circular {
+  font-family: CircularAir-Light;
+}
+.background-images {
+  max-width: 480px;
+  background: url(../src/images/Bitmap.png);
+  min-height: 100vh;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+  margin: auto;
+}
+.background-images .MuiPaper-root {
+  background: transparent !important;
+  box-shadow: none !important;
+  text-align: center;
+}
+.background-images .MuiTypography-colorTextSecondary {
+  color: #fff !important;
+}
+.background-images .Walkthrough-flexBar-15 {
+  display: flex;
+  margin-top: 10px !important;
+  justify-content: center;
+}
+.Walkthrough-flexBar-158 {
+  display: flex;
+  margin-top: 10px !important;
+  justify-content: center;
+}
+@media (max-width:767px) {
+  .top-images{
+    display: none;
+  }
+  .background-image {
+
+    padding: 12px;
+ 
+}
+.background-images {
+  padding: 12px;
+}
+.background-images .MuiPaper-root {
+  background: transparent !important;
+  box-shadow: none !important;
+  text-align: center;
+  padding: 24px 0;
+}
+.home-text {
+  font-size: 1.6rem;
+  padding-bottom: 10px !important;
+}
+.Walkthrough-grid-2 {
+  margin: 0 0px !important;
+}
+
+.Walkthrough-grid-145
+{
+  margin: 0 !important;
+}
+
+}
+
+.permissionBtn{
+  color: #fff;
+  width: 90%;
+  border: none;
+  padding: 10px;
+  font-size: 1.1rem;
+  margin: auto;
+  border-radius: 30px;
+  background-color: #191919;
+  height: 60px;
+  text-transform: uppercase;
+  cursor: pointer !important;
+}
+
+

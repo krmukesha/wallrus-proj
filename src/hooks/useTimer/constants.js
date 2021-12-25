@@ -1,0 +1,8 @@
+export const TIMER_LOW_RFR = 1000 / 28;
+export const TIMER_MID_RFR = 1000 / 30;
+export const TIMER_HIGH_RFR = 1000 / 60;
+
+export const TIMER_STATE_STANDBY = "TIMER_STATE_STANDBY";
+export const TIMER_STATE_RUNNING = "TIMER_STATE_RUNNING";
+export const TIMER_STATE_PAUSED = "TIMER_STATE_PAUSED";
+export const TIMER_STATE_DONE = "TIMER_STATE_DONE";
