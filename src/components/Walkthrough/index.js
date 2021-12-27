@@ -117,8 +117,8 @@ const Walkthrough = ({ classes, ...props }) => {
       // State
       permissionsGranted={permissionsGranted}
       handlePermissionsGranted={handlePermissionsGranted}
-      handleNoButton = {handleNoButton}
-      noButtonStatus = {noButtonStatus}
+      handleNoButton={handleNoButton}
+      noButtonStatus={noButtonStatus}
       speedTestResults={speedTestResults}
       handleSpeedTestResults={handleSpeedTestResults}
       termsChecked={termsChecked}

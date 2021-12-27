@@ -1,5 +1,9 @@
 {
   "stm32-for-vscode.openOCDPath": false,
   "stm32-for-vscode.armToolchainPath": false,
-  "jest.jestCommandLine": "yarn test"
+  "jest.jestCommandLine": "yarn test",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+  }
 }
