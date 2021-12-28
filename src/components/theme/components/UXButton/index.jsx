@@ -7,35 +7,35 @@ import withStyles from "@material-ui/styles/withStyles";
 import styles from "../../styles";
 
 const UXButton = ({
-  fullWidthBreakpoints,
-  classes,
-  onClick,
-  children,
-  className,
+	fullWidthBreakpoints,
+	classes,
+	onClick,
+	children,
+	className,
 }) => {
-  const matches = useMediaQuery((theme) => theme.breakpoints.down("sm"));
+	const matches = useMediaQuery((theme) => theme.breakpoints.down("sm"));
 
-  return (
-    <Button
-      onClick={onClick}
-      color="primary"
-      variant="contained"
-      // className={classes.actionButton}
-      className={`${className ? className : classes.actionButtom} ${
-        matches ? classes.fullWidth : ""
-      }`}
-      fullWidth={fullWidthBreakpoints && matches}
-    >
-      {children}
-    </Button>
-  );
+	return (
+		<Button
+			onClick={onClick}
+			color="primary"
+			variant="contained"
+			// className={classes.actionButton}
+			className={`${className ? className : classes.actionButtom} ${
+				matches ? classes.fullWidth : ""
+			}`}
+			fullWidth={fullWidthBreakpoints && matches}
+		>
+			{children}
+		</Button>
+	);
 };
 UXButton.propTypes = {
-  fullWidthBreakpoints: PropTypes.bool,
-  classes: PropTypes.object,
-  onClick: PropTypes.func,
-  children: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  className: PropTypes.string,
+	fullWidthBreakpoints: PropTypes.bool,
+	classes: PropTypes.object,
+	onClick: PropTypes.func,
+	children: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+	className: PropTypes.string,
 };
 
 export default withStyles(styles)(UXButton);

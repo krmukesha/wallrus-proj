@@ -82,12 +82,12 @@ body {
 }
 .paper .InfoBoxFullWidth-actionButtom-61 {
   width: 100%;
-  margin: 8px;
+  margin: 8px 0;
   text-transform: uppercase;
 }
 .paper .InfoBoxFullWidth-actionButtom-61 {
   width: 100%;
-  margin: 0px;
+
   text-transform: uppercase;
   border-radius: 30px;
   background-color: #191919;

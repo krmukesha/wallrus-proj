@@ -46,8 +46,7 @@ const styles = (theme) => ({
 		height: "60px",
 		width: "100%",
 		color: "#fff",
-		// eslint-disable-next-line no-dupe-keys
-		margin: "0",
+		margin: "8px 0",
 		padding: "10px",
 		borderRadius: " 30px",
 		fontSize: "1.1rem",
